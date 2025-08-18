@@ -1,0 +1,17 @@
+# Configuration file for transport ETL pipeline
+
+paths:
+  raw_data: "C:/Users/HP/Tina/Projects/mode_of_transportation.xlsx"   # Input Excel file
+  output_data: "C:/Users/HP/Tina/Projects/updated_mode_of_transportation.csv"  # Output CSV file
+
+logging:
+  level: "DEBUG"    # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  datefmt: "%Y-%m-%d %H:%M:%S"
+
+transformations:
+  rename_columns:
+    reportyear: report_year
+    geotype: geo_type
+    geotypevalue: geo_type_value
+    geoname: geo_name
