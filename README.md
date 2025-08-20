@@ -28,7 +28,7 @@ pip install pandas numpy openpyxl pyyaml
 1. Update the file paths in config.yaml
 2. Run the pipeline
 ```bash
-python etl_pipeline.py
+python transport_etl_pipeline.py
 ```
 3. Check the output CSV at the location specified in config.yaml.
 
