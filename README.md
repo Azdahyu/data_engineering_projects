@@ -13,9 +13,9 @@ This project builds a **data pipeline** that:
 
 ## **Project Structure**
 ├── api  
-    └── fetch_api_data.py
+    └── fetch_api_data.py  
 ├── s3  
-    └── upload_to_s3.py
+    └── upload_to_s3.py  
 ├── snowflake  
     └── create_storage_integration.sql # One-time setup  
     └── s3_snowflake.sql # Main ETL pipeline  
