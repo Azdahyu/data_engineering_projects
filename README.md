@@ -12,14 +12,14 @@ This project builds a **data pipeline** that:
 ---
 
 ## **Project Structure**
-├── api
-│ └── fetch_api_data.py
-├── s3
-│ └── upload_to_s3.py
-├── snowflake
-│ ├── create_storage_integration.sql # One-time setup
-│ ├── s3_snowflake.sql # Main ETL pipeline
-└── README.md
+├── api  
+    └── fetch_api_data.py
+├── s3  
+    └── upload_to_s3.py
+├── snowflake  
+    └── create_storage_integration.sql # One-time setup  
+    └── s3_snowflake.sql # Main ETL pipeline  
+├── README.md
 
 ---
 
@@ -96,12 +96,11 @@ SELECT * FROM FactSales LIMIT 10;
 ### **Workflow Summary**
 | Step | Action                      | Script                           | Frequency   |
 | ---- | --------------------------- | -------------------------------- | ----------- |
-| 1    | Set up S3 → Snowflake trust | `create_storage_integration.sql` | **Once**    |
-| 2    | Build stage, tables, tasks  | `s3_snowflake.sql`               | Re-runnable |
-| 3    | Fetch API data              | `api/fetch_api_data.py`          | As needed   |
-| 4    | Upload data to S3           | `s3/upload_to_s3.py`             | As needed   |
+| 1    | Fetch API data              | `api/fetch_api_data.py`          | As needed   |
+| 2    | Upload data to S3           | `s3/upload_to_s3.py`             | As needed   |
+| 3    | Set up S3 → Snowflake trust | `create_storage_integration.sql` | **Once**    |
+| 4    | Build stage, tables, tasks  | `s3_snowflake.sql`               | Re-runnable |
 | 5    | Auto-load + transform data  | Snowflake Tasks                  | Automatic   |
-
 
 
 
