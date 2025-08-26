@@ -66,14 +66,20 @@ aws configure
 ```
 
 ### **3. Execution Order**
-**Step 1 → Run One-Time Setup (Storage Integration)**
+**Step 1 → Fetch & Upload Data**
+```bash
+python -m api.fetch_api_data
+python -m s3.upload_to_s3
+```
+
+**Step 2 → Run One-Time Setup (Storage Integration)**
 ```bash
 snowsql -a <account_identifier> -u <username> -f snowflake/create_storage_integration.sql
 ```
 - Grants Snowflake access to S3.
 - This only needs to be done once.
-
-**Step 2 → Run Main ETL Pipeline**
+  
+**Step 3 → Run Main ETL Pipeline**
 ```bash
 snowsql -a <account_identifier> -u <username> -f snowflake/s3_snowflake.sql
 ```
@@ -82,12 +88,6 @@ Creates the warehouse, database, and schema.
 Creates the external stage linked to your S3 bucket.  
 Sets up streams and tasks for change tracking.  
 Transforms and loads data into the star schema.  
-
-**Step 3 → Fetch & Upload Data**
-```bash
-python -m api.fetch_api_data
-python -m s3.upload_to_s3
-```
 
 **Step 4 → Verify Data in Snowflake**
 ```bash
