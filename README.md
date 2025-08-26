@@ -12,13 +12,13 @@ This project builds a **data pipeline** that:
 ---
 
 ## **Project Structure**
-├── api
-│ └── fetch_api_data.py
-├── s3
-│ └── upload_to_s3.py
-├── snowflake
-│ ├── create_storage_integration.sql # One-time setup
-│ ├── s3_snowflake.sql # Main ETL pipeline
+├── api  
+    └── fetch_api_data.py  
+├── s3  
+    └── upload_to_s3.py  
+├── snowflake  
+    ├── create_storage_integration.sql # One-time setup  
+    ├── s3_snowflake.sql # Main ETL pipeline  
 └── README.md
 
 ---
@@ -101,7 +101,3 @@ SELECT * FROM FactSales LIMIT 10;
 | 3    | Fetch API data              | `api/fetch_api_data.py`          | As needed   |
 | 4    | Upload data to S3           | `s3/upload_to_s3.py`             | As needed   |
 | 5    | Auto-load + transform data  | Snowflake Tasks                  | Automatic   |
-
-
-
-
