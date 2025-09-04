@@ -12,7 +12,7 @@ This project builds a **data pipeline** that:
 ---
 ## Architecture Diagram
 
-![Architecture Diagram](api_s3_snowflake_pipeline_no_airflow/api-s3-snowflake-diagram.png)
+![Architecture Diagram](images/api-s3-snowflake-diagram.png)
 ---
 
 ## **Project Structure**
