@@ -1,4 +1,4 @@
-# API → S3 → Snowflake Data Pipeline
+# API → S3 → Snowflake ELT Pipeline
 
 ## **Overview**
 This project builds a **data pipeline** that:
