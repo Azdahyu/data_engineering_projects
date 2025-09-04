@@ -12,7 +12,7 @@ This project builds a **data pipeline** that:
 ---
 ## Architecture Diagram
 
-<img src="C:/Users/HP/Tina/api_s3_snowflake_pipeline_no_airflow/api-s3-snowflake-diagram.png" alt="Architecture Diagram" width="500"/>
+![Architecture Diagram](C:/Users/HP/Tina/api_s3_snowflake_pipeline_no_airflow/api-s3-snowflake-diagram.png)
 
 ---
 
